@@ -190,45 +190,51 @@
         /* 游戏作品区域 */
         .games-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
             margin-top: 2rem;
+            max-width: 1000px;
+            margin-left: auto;
+            margin-right: auto;
         }
 
         .game-card {
             background: white;
-            border-radius: 15px;
-            padding: 1.5rem;
+            border-radius: 20px;
+            padding: 0;
             text-align: center;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-            transition: transform 0.3s ease;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: all 0.3s ease;
+            overflow: hidden;
         }
 
         .game-card:hover {
-            transform: scale(1.05);
+            transform: translateY(-10px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
         }
 
-        .game-icon {
-            width: 80px;
-            height: 80px;
-            background: linear-gradient(45deg, #667eea, #764ba2);
-            border-radius: 50%;
-            margin: 0 auto 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 2rem;
-            color: white;
+        .game-image {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+            border-radius: 20px 20px 0 0;
+        }
+
+        .game-content {
+            padding: 2rem;
         }
 
         .game-card h3 {
             color: #333;
-            margin-bottom: 0.5rem;
+            margin-bottom: 1rem;
+            font-size: 1.3rem;
+            font-weight: 600;
         }
 
         .game-card p {
             color: #666;
-            font-size: 0.9rem;
+            font-size: 1rem;
+            line-height: 1.6;
         }
 
         /* 愿景区域 */
@@ -248,18 +254,16 @@
         }
 
         .contact-single {
-            display: flex;
-            justify-content: center;
             margin-top: 2rem;
         }
 
         .contact-single .contact-item {
-            max-width: 400px;
             width: 100%;
+            max-width: none;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
             border-radius: 20px;
-            padding: 3rem 2rem;
+            padding: 4rem 3rem;
             text-align: center;
             position: relative;
             overflow: hidden;
@@ -284,8 +288,8 @@
         }
 
         .contact-icon {
-            font-size: 4rem;
-            margin-bottom: 1.5rem;
+            font-size: 5rem;
+            margin-bottom: 2rem;
             color: white;
             position: relative;
             z-index: 1;
@@ -294,8 +298,8 @@
 
         .contact-item h3 {
             color: white;
-            margin-bottom: 1rem;
-            font-size: 1.5rem;
+            margin-bottom: 1.5rem;
+            font-size: 2rem;
             font-weight: 300;
             position: relative;
             z-index: 1;
@@ -304,7 +308,7 @@
         .email-link {
             display: inline-block;
             color: white;
-            font-size: 1.2rem;
+            font-size: 1.5rem;
             font-weight: 500;
             text-decoration: none;
             position: relative;
@@ -393,8 +397,9 @@
             }
 
             .contact-single .contact-item {
-                max-width: 320px;
-                padding: 2rem 1.5rem;
+                width: 100%;
+                max-width: none;
+                padding: 3rem 2rem;
             }
 
             .contact-icon {
@@ -460,24 +465,18 @@
                 <h2>🎮 我们的游戏作品</h2>
                 <div class="games-grid">
                     <div class="game-card">
-                        <div class="game-icon">🏃</div>
-                        <h3>极速跑酷</h3>
-                        <p>一款刺激的3D跑酷游戏，在城市的屋顶间跳跃，躲避障碍，收集金币，挑战你的反应速度！</p>
+                        <img src="resources/Game_01.png" alt="木头人游戏" class="game-image">
+                        <div class="game-content">
+                            <h3>木头人游戏</h3>
+                            <p>经典的童年游戏数字版！在"红灯停，绿灯行"的规则下，挑战你的反应速度和自控能力。可爱的角色设计和丰富的关卡等你来探索！</p>
+                        </div>
                     </div>
                     <div class="game-card">
-                        <div class="game-icon">⚔️</div>
-                        <h3>魔法传说</h3>
-                        <p>史诗级的RPG冒险游戏，扮演勇敢的魔法师，探索神秘的世界，与强大的敌人战斗！</p>
-                    </div>
-                    <div class="game-card">
-                        <div class="game-icon">🧩</div>
-                        <h3>智慧拼图</h3>
-                        <p>休闲益智游戏，精美的拼图设计，从简单到复杂，锻炼你的逻辑思维和观察能力！</p>
-                    </div>
-                    <div class="game-card">
-                        <div class="game-icon">🏆</div>
-                        <h3>竞技场</h3>
-                        <p>多人竞技游戏，与来自世界各地的玩家实时对战，展现你的技巧和策略！</p>
+                        <img src="resources/Game_02.png" alt="水果侦探游戏" class="game-image">
+                        <div class="game-content">
+                            <h3>水果侦探游戏</h3>
+                            <p>化身可爱的草莓侦探，在充满童趣的世界中解开谜题！通过观察、推理和收集线索，成为最棒的水果侦探，体验有趣的解谜冒险！</p>
+                        </div>
                     </div>
                 </div>
             </div>
