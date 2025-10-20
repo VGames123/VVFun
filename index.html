@@ -190,10 +190,10 @@
         /* 游戏作品区域 */
         .games-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-            gap: 3rem;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem;
             margin-top: 2rem;
-            max-width: 1000px;
+            max-width: 1200px;
             margin-left: auto;
             margin-right: auto;
         }
@@ -215,26 +215,26 @@
 
         .game-image {
             width: 100%;
-            height: 250px;
+            height: 300px;
             object-fit: cover;
             border-radius: 20px 20px 0 0;
         }
 
         .game-content {
-            padding: 2rem;
+            padding: 2.5rem;
         }
 
         .game-card h3 {
             color: #333;
-            margin-bottom: 1rem;
-            font-size: 1.3rem;
+            margin-bottom: 1.5rem;
+            font-size: 1.6rem;
             font-weight: 600;
         }
 
         .game-card p {
             color: #666;
-            font-size: 1rem;
-            line-height: 1.6;
+            font-size: 1.1rem;
+            line-height: 1.7;
         }
 
         /* 愿景区域 */
@@ -372,6 +372,28 @@
 
             .card {
                 padding: 1.5rem;
+            }
+
+            .games-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+                max-width: 600px;
+            }
+
+            .game-image {
+                height: 250px;
+            }
+
+            .game-content {
+                padding: 2rem;
+            }
+
+            .game-card h3 {
+                font-size: 1.4rem;
+            }
+
+            .game-card p {
+                font-size: 1rem;
             }
         }
 
